@@ -1,16 +1,55 @@
-$main-color:          #7dcbcf;
-$warning-color:       #fdc05d;
+$main-color:          #003770;
+$warning-color:       #ff6923;
 
 $gray-light:          #f2f2f2;
-$gray-dark:           #231f20;
+$gray-dark:           #333;
 
 $text-color:          $gray-dark;
 
-$font-family:         -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-$font-size:           14px;
-$line-height:         1.4;
-
+// Переменные сетки
 $screen-xs:           480px;
 $screen-sm:           768px;
 $screen-md:           992px;
 $screen-lg:           1200px;
+
+$gap:                 15px;
+$col:                 6;
+
+// Типографика
+
+@font-face {
+  font-family: 'FuturaPT Book';
+  src:
+    url('../fonts/FuturaPT-Book.eot'),
+    url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Book.woff') format('woff'),
+    url('../fonts/FuturaPT-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT Medium';
+  src:
+    url('../fonts/FuturaPT-Medium.eot'),
+    url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Medium.woff') format('woff'),
+    url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT Demi';
+  src:
+    url('../fonts/FuturaPT-Demi.eot'),
+    url('../fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Demi.woff') format('woff'),
+    url('../fonts/FuturaPT-Demi.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+$font-family:         'FuturaPT Book', Trebuchet, Arial, sans-serif;
+$font-size:           14px;
+$line-height:         1.4;

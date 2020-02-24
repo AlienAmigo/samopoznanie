@@ -1,0 +1,139 @@
+// =================================================================
+//                       СТИЛИ СЕТКИ
+// =================================================================
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+[class*='col-'] {
+
+  padding: 0 $gap;
+}
+
+@media (max-width: $screen-xs) {
+
+  .container {
+    width: 100%;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  [class*='col-'] {
+    width: 100%;
+  }
+
+  [class*='offset-'] {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $screen-xs) {
+
+  .container {
+    width: $screen-xs;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  @for $i from $col through 1 {
+    .col-xs-#{$i} {
+      width: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+
+  @for $i from $col through 0 {
+    .offset-xs-#{$i} {
+      margin-left: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+}
+
+@media (min-width: $screen-sm) {
+
+  .container {
+    width: $screen-sm;
+  }
+
+  .hidden-sm {
+    display: none;
+  }
+
+  @for $i from $col through 1 {
+    .col-sm-#{$i} {
+      width: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+
+  @for $i from $col through 0 {
+    .offset-sm-#{$i} {
+      margin-left: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+
+  .container {
+    width: $screen-md;
+  }
+
+  .hidden-md {
+    display: none;
+  }
+
+  @for $i from $col through 1 {
+    .col-md-#{$i} {
+      width: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+
+  @for $i from $col through 0 {
+    .offset-md-#{$i} {
+      margin-left: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+
+  .container {
+    width: $screen-lg;
+  }
+
+  .hidden-lg {
+    display: none;
+  }
+
+  @for $i from $col through 1 {
+    .col-lg-#{$i} {
+      width: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+
+  @for $i from $col through 0 {
+    .offset-lg-#{$i} {
+      margin-left: calc(100% * (#{$i}/#{$col}));
+    }
+  }
+}
