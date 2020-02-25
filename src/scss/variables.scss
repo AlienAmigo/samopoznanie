@@ -20,10 +20,10 @@ $col:                 6;
 @font-face {
   font-family: 'FuturaPT Book';
   src:
-    url('../fonts/FuturaPT-Book.eot'),
-    url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/FuturaPT-Book.woff') format('woff'),
-    url('../fonts/FuturaPT-Book.ttf') format('truetype');
+    // url('../fonts/FuturaPT-Book.eot'),
+    // url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+    // url('../fonts/FuturaPT-Book.ttf') format('truetype'),
+    url('../fonts/FuturaPT-Book.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -31,10 +31,10 @@ $col:                 6;
 @font-face {
   font-family: 'FuturaPT Medium';
   src:
-    url('../fonts/FuturaPT-Medium.eot'),
-    url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/FuturaPT-Medium.woff') format('woff'),
-    url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+    // url('../fonts/FuturaPT-Medium.eot'),
+    // url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+    // url('../fonts/FuturaPT-Medium.ttf') format('truetype'),
+    url('../fonts/FuturaPT-Medium.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
@@ -42,14 +42,14 @@ $col:                 6;
 @font-face {
   font-family: 'FuturaPT Demi';
   src:
-    url('../fonts/FuturaPT-Demi.eot'),
-    url('../fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/FuturaPT-Demi.woff') format('woff'),
-    url('../fonts/FuturaPT-Demi.ttf') format('truetype');
+    // url('../fonts/FuturaPT-Demi.eot'),
+    // url('../fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+    // url('../fonts/FuturaPT-Demi.ttf') format('truetype'),
+    url('../fonts/FuturaPT-Demi.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 $font-family:         'FuturaPT Book', Trebuchet, Arial, sans-serif;
-$font-size:           14px;
-$line-height:         1.4;
+$font-size:           18px;
+$line-height:         1.44;

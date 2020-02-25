@@ -23,7 +23,7 @@
 }
 
 [class*='col-'] {
-
+  width: 100%;
   padding: 0 $gap;
 }
 
@@ -37,8 +37,10 @@
     display: none;
   }
 
-  [class*='col-'] {
-    width: 100%;
+  @for $i from $col through 1 {
+    .col-xs-#{$i} {
+      width: calc(100% * (#{$i}/#{$col}));
+    }
   }
 
   [class*='offset-'] {
