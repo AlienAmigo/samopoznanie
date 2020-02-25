@@ -25,12 +25,12 @@ html(class='page  no-js', lang='ru')
             .row
               p.header__text.col-sm-6 На этих порталах вы найдёте, пожалуй, самое полное расписание тренингов в России:
             .row
-              .col-xs-6.col-sm-6.col-md-3.col-lg-3 
+              .col-xs-6.col-sm-3.col-md-3.col-lg-3 
                 a.logo__link(href="#")
-                  img(src="img/logo_samopoznanie_ru.png" alt="")
-              .col-xs-6.col-sm-6.col-md-3.col-lg-3 
+                  img(src="img/logo_samopoznanie_ru.jpg" alt="")
+              .col-xs-6.col-sm-3.col-md-3.col-lg-3 
                 a.logo__link(href="#")
-                  img(src="img/vsetreningi_logo3.png" alt="")  
+                  img(src="img/vsetreningi_logo3.jpg" alt="")  
 
         main
           .container
@@ -46,16 +46,20 @@ html(class='page  no-js', lang='ru')
               .row
                 - const DomainList = ["тренинги.рф","тренинги.укр","семинары.рус","МоиТренинги.рф","МоиТренинги.рф","moitreningi.ru","саморазвитие.рф","саморазвитие.укр","призвание.рф","хатха-йога.рф","психотерапия.рф","МестаСилы.рф"];
                 - for(i = 0; i < DomainList.length; i++) 
-                  .offer__checkbox-wrap.col-xs-3.col-sm-3.col-md-2.col-lg-1
-                    input.offer__checkbox(type="checkbox" id=`check-${i}` name=`check-${i}`)
-                    label.offer__label(for=`check-${i}`)= DomainList[i]
+                  .col-xs-3.col-sm-2.col-md-2.col-lg-1
+                    .offer__checkbox-wrap
+                      input.offer__checkbox(type="checkbox" id=`check-${i}` name=`check-${i}`)
+                      label.offer__label(for=`check-${i}`)= DomainList[i]
               input.offer__submit(type="submit" value="купить домен")
             .row
               .col-sm-12
                 p.offer__mailto или напишите на e-mail: #[a.offer__mailto-link(href="mailto:home@samopoznanie.ru") home@samopoznanie.ru]
 
       .page__footer-wrapper
-        p Мы не занимаемся киберсквоттингом (захватом доменов, которые являются чьими-то товарными знаками). Если какая-либо организация сможет предоставить нам свидетельство о регистрации товарного знака, совпадающего с одним из наших доменных имён, мы с удовольствием передадим домен (при условии, что товарный знак зарегистрирован в России раньше, чем наше доменное имя) 
+        .container
+          .row
+            .col-xs-12
+              p.comment Мы не занимаемся киберсквоттингом (захватом доменов, которые являются чьими-то товарными знаками). Если какая-либо организация сможет предоставить нам свидетельство о регистрации товарного знака, совпадающего с одним из наших доменных имён, мы с удовольствием передадим домен (при условии, что товарный знак зарегистрирован в России раньше, чем наше доменное имя) 
 
     block page-bottom
       script(src='js/script.min.js' deffer)

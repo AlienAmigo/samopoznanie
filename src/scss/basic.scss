@@ -1,8 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  background-image: url(../img/back.jpg);
+  background-position: bottom center;
+  background-size: contain contain;
+  background-repeat: no-repeat;
 }
 
 .page {
@@ -46,6 +56,7 @@ body {
 
     img {
       display: block;
+      max-width: 100%;
     }
   }
 }
@@ -62,4 +73,82 @@ body {
   color: $text-color;
   font-family: $font-family;
   font-size: $font-size;
+}
+
+.offer {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    box-sizing: border-box;
+    min-height: 80px;
+    margin-bottom: 20px;
+    font-family: 'FuturaPT Medium', 'Trebuchet', Arial, sans-serif;
+    font-size: $font-size;
+    color: $text-color;
+    background: linear-gradient(45deg, rgb(242,242,242) 0%, rgb(253,253,253) 74%);
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.09);
+    cursor: pointer;
+  }
+  
+  &__label {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    &:before {
+      content: '';
+      display: none;
+      position: absolute;
+      z-index: 0;
+      top: -30px;
+      left: -4px;
+      width: 100%;
+      height: 80px;
+      border: 2px solid $warning-color;
+    }
+  }
+
+  &__submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 25px;
+    border: 0;
+    outline: 0;
+    background-color: $warning-color;
+    color: #fff;
+    font-family: $font-family;
+    font-size: $font-size;
+    cursor: pointer;
+  }
+
+  &__mailto {
+    text-align: center;
+    font-size: 14px;
+    color: $text-color;
+
+    &-link {
+      font-family: 'FuturaPT Demi', 'Trebuchet', Arial, sans-serif;
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.comment {
+  text-align: center;
+  color: $text-color;
+  font-size: 14px;
+  line-height: 18px;
 }
