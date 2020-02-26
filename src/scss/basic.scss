@@ -11,7 +11,7 @@ body {
   background-color: #fff;
   background-image: url(../img/back.jpg);
   background-position: bottom center;
-  background-size: contain contain;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -24,7 +24,7 @@ body {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    padding-top: 125px;
+    padding-top: 45px;
   }
   
   &__content {
@@ -56,6 +56,17 @@ body {
     flex-direction: row;
     justify-content: center;
 
+    &--left {
+      animation: 1s ease bounceInLeft;
+    }
+    &--right {
+      animation: 1s ease bounceInRight;
+    }
+
+    &:hover {
+      transform: scale3d(1.05, 1.05, 1.05)
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -82,11 +93,7 @@ body {
 .offer {
   margin-top: 60px;
 
-  &__checkbox {
-    display: none;
-  }
-
-  &__checkbox-wrap {
+  &__wrap {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -99,32 +106,19 @@ body {
     color: $text-color;
     background: linear-gradient(45deg, rgb(242,242,242) 0%, rgb(253,253,253) 74%);
     box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.09);
-    cursor: pointer;
+    animation:zoomIn 1s ease;
   }
   
-  &__label {
+  &__text {
     display: block;
     position: relative;
     z-index: 5;
-    width: 100%;
-    height: 100%;
     text-align: center;
-
-    &:before {
-      content: '';
-      display: none;
-      position: absolute;
-      z-index: 0;
-      top: -30px;
-      left: -4px;
-      width: 100%;
-      height: 80px;
-      border: 2px solid $warning-color;
-    }
   }
 
-  &__submit {
+  &__button {
     display: block;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     margin-top: 34px;
@@ -137,6 +131,11 @@ body {
     font-family: $font-family;
     font-size: 16px;
     cursor: pointer;
+
+    &:hover {
+      border-radius: 3px;
+      animation: pulse 0.5s ease;
+    }
   }
 
   &__mailto {
@@ -148,6 +147,10 @@ body {
       font-family: 'FuturaPT Demi', 'Trebuchet', Arial, sans-serif;
       color: $text-color;
       text-decoration: none;
+
+      &:hover {
+        color: $warning-color;
+      }
     }
   }
 }
@@ -159,4 +162,98 @@ body {
   color: $text-color;
   font-size: 14px;
   line-height: 18px;
+}
+
+// ======================== PAD ======================== 
+
+@media (max-width: $screen-md) {
+
+  .page {
+
+    &__inner {
+      padding-top: 30px;
+    }
+  } 
+
+  .logo {
+  
+    &__link {
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .comment {
+    margin-bottom: 60px;
+  }
+}
+
+
+// ======================== MOBILE ======================== 
+@media (max-width: $screen-xs) {
+
+  .page {
+
+    &__inner {
+      padding-top: 30px;
+    }
+  }
+
+  .header {
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: $font-size-sm;
+    }
+  }
+  
+  .logo {
+  
+    &__link {
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .title {
+    margin-top: 33px;
+    margin-bottom: 11px;
+    font-size: 24px;
+  }
+  
+  .text {
+    font-size: $font-size-sm;
+  }
+  
+  .offer {
+    margin-top: 35px;
+  
+    &__wrap {
+      min-height: 70px;
+      margin-bottom: 21px;
+      font-size: 16px;
+    }
+
+    &__button {
+      margin-top: 12px;
+      padding: 7px 22px;
+    }
+
+    &__mailto {
+      font-size: 12px;
+    }
+  }
+  
+  .comment {
+    margin-top: 64px;
+    margin-bottom: 60px;
+    font-size: 12px;
+  }
 }
