@@ -2925,9 +2925,28 @@ body {
     font-size: 16px;
     cursor: pointer; }
     .offer__button:hover {
-      border-radius: 3px;
-      -webkit-animation: pulse 0.5s ease;
-              animation: pulse 0.5s ease; }
+      background: linear-gradient(-45deg, #fe9752, #ff6923, #ff1f17);
+      background-size: 400% 400%;
+      -webkit-animation: gradient 3s ease infinite;
+              animation: gradient 3s ease infinite;
+      -webkit-box-shadow: 1px 1px 10px #ff6923;
+              box-shadow: 1px 1px 10px #ff6923; }
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
   .offer__mailto {
     text-align: center;
     font-size: 14px;
@@ -2948,6 +2967,8 @@ body {
   line-height: 18px; }
 
 @media (max-width: 992px) {
+  body {
+    background-size: 100%; }
   .page__inner {
     padding-top: 30px; }
   .logo__link {
@@ -2961,6 +2982,8 @@ body {
     margin-bottom: 60px; } }
 
 @media (max-width: 480px) {
+  .body {
+    background-size: 100%; }
   .page__inner {
     padding-top: 30px; }
   .header__text {
