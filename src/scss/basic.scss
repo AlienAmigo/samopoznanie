@@ -102,10 +102,10 @@ body {
     justify-content: center;
     min-height: 80px;
     margin-bottom: 20px;
-    font-family: 'FuturaPT Medium', 'Trebuchet', Arial, sans-serif;
+    font-family: 'FuturaPT Medium', 'Trebuchet', 'Arial', sans-serif;
     font-size: $font-size;
     color: $text-color;
-    background: linear-gradient(45deg, rgb(242,242,242) 0%, rgb(253,253,253) 74%);
+    background: linear-gradient(45deg, rgb(204, 204, 204) 0%, rgb(253,253,253) 74%);
     box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.09);
     animation:zoomIn 1s ease;
   }
@@ -134,7 +134,7 @@ body {
     cursor: pointer;
 
     &:hover {
-      background: linear-gradient(-45deg, #fe9752, $warning-color,#ff1f17);
+      background: linear-gradient(-45deg, #fe9752, $warning-color, #ff1f17);
       background-size: 400% 400%;
       animation: gradient 3s ease infinite;
       box-shadow: 1px 1px 10px $warning-color;
@@ -159,7 +159,7 @@ body {
     color: $text-color;
 
     &-link {
-      font-family: 'FuturaPT Demi', 'Trebuchet', Arial, sans-serif;
+      font-family: 'FuturaPT Demi', 'Trebuchet', 'Arial', sans-serif;
       color: $text-color;
       text-decoration: none;
 

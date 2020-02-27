@@ -2,19 +2,22 @@
   font-family: 'FuturaPT Book';
   src: url("../fonts/FuturaPT-Book.woff") format("woff");
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  font-display: block; }
 
 @font-face {
   font-family: 'FuturaPT Medium';
   src: url("../fonts/FuturaPT-Medium.woff") format("woff");
   font-weight: 600;
-  font-style: normal; }
+  font-style: normal;
+  font-display: block; }
 
 @font-face {
   font-family: 'FuturaPT Demi';
   src: url("../fonts/FuturaPT-Demi.woff") format("woff");
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal;
+  font-display: block; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -2774,10 +2777,10 @@ body {
   animation-duration: 3s; }
 
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 body {
   display: -webkit-box;
@@ -2809,8 +2812,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
     padding-top: 45px; }
   .page__content {
     display: -webkit-box;
@@ -2885,20 +2888,20 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     min-height: 80px;
     margin-bottom: 20px;
-    font-family: 'FuturaPT Medium', 'Trebuchet', Arial, sans-serif;
+    font-family: 'FuturaPT Medium', 'Trebuchet', 'Arial', sans-serif;
     font-size: 18px;
     color: #333;
-    background: linear-gradient(45deg, #f2f2f2 0%, #fdfdfd 74%);
+    background: linear-gradient(45deg, #cccccc 0%, #fdfdfd 74%);
     -webkit-box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.09);
             box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.09);
     -webkit-animation: zoomIn 1s ease;
@@ -2952,7 +2955,7 @@ body {
     font-size: 14px;
     color: #333; }
     .offer__mailto-link {
-      font-family: 'FuturaPT Demi', 'Trebuchet', Arial, sans-serif;
+      font-family: 'FuturaPT Demi', 'Trebuchet', 'Arial', sans-serif;
       color: #333;
       text-decoration: none; }
       .offer__mailto-link:hover {
